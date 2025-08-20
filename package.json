@@ -1,0 +1,16 @@
+{
+  "name": "tabgen-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist",
+    "zip": "npm run build && cd .. && zip -r tabgen-extension.zip tabgen-extension -x '*/node_modules/*' -x '*/.git/*' -x '*/dist/*.map'"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.278",
+    "typescript": "^5.4.0"
+  }
+}
