@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>TabGen Options</title>
+    <style>
+      body { font: 13px/1.4 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; padding: 16px; max-width: 720px; }
+      input[type=text] { width: 100%; }
+      .row { margin: 10px 0; }
+      .hint { font-size: 12px; color: #666; }
+      code { background: #f5f5f5; padding: 0 4px; }
+    </style>
+  </head>
+  <body>
+    <h2>TabGen Options</h2>
+    <p class="hint">
+      Hugging Face Inference API is optional. Without a token, TabGen falls back to a simple plan using search pages.
+      You can create a free token on <a href="https://huggingface.co/settings/tokens" target="_blank">Hugging Face</a>.
+    </p>
+    <div class="row">
+      <label>Hugging Face Token</label>
+      <input id="hf_token" type="text" placeholder="hf_xxx... (optional)" />
+    </div>
+    <div class="row">
+      <label>Model (optional)</label>
+      <input id="hf_model" type="text" placeholder="e.g., Qwen/Qwen2.5-0.5B-Instruct" />
+      <div class="hint">Defaults to <code>Qwen/Qwen2.5-0.5B-Instruct</code>. Small, fast, and supports instruction following.</div>
+    </div>
+    <div class="row">
+      <button id="save">Save</button>
+    </div>
+    <div id="status"></div>
+    <script type="module" src="dist/options.js"></script>
+  </body>
+</html>
