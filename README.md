@@ -1,2 +1,4 @@
 # tabgen-extension
 I learn new concepts or deepen existing knowledge with a sequence of tabs - I would like a shortcut of generating and managing tabs (open/close and group tabs/windows), so I'm making a browser extension that generates the most relevant sequence of tabs. I will use this tool for my own learning of new concepts.
+
+More generally, I want this project to be a browser extension that manages your browser using plaintext (I know Opera Neon exists - I want a lightweight browser extension). I should be able to tell the extension what to do with which tabs in plaintext. If I want to learn some concept some way (e.g. quickly, at research depth, through videos, a mix, etc) it should give me that sequence of tabs organized in a Chrome group and allow me to edit that group, all with plaintext.
