@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>TabGen</title>
+    <style>
+      body { font: 13px/1.4 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; padding: 12px; width: 340px; }
+      textarea { width: 100%; height: 80px; }
+      select, input[type=number] { width: 100%; }
+      .row { margin: 8px 0; }
+      #plan { white-space: pre-wrap; margin-top: 8px; }
+      #status { color: #555; margin-top: 6px; }
+      .hint { font-size: 11px; color: #777; }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <div class="row">
+        <label>What do you want to learn?</label>
+        <textarea id="goal" placeholder="e.g., Learn Kubernetes quickly with videos"></textarea>
+        <div class="hint">Describe your goal in plain text. Optionally set style and tab count below.</div>
+      </div>
+      <div class="row">
+        <label>Style</label>
+        <select id="style">
+          <option value="mix">Mix</option>
+          <option value="quick">Quick</option>
+          <option value="research">Research</option>
+          <option value="videos">Videos</option>
+        </select>
+      </div>
+      <div class="row">
+  <label>Max Tabs</label>
+  <input id="maxTabs" type="number" min="3" max="30" value="12" />
+      </div>
+      <div class="row">
+        <button type="submit">Plan</button>
+        <a href="options.html" target="_blank" style="float:right">Options</a>
+      </div>
+    </form>
+    <div id="status"></div>
+    <div id="plan"></div>
+    <script type="module" src="dist/popup.js"></script>
+  </body>
+</html>
