@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "TabGen: Plaintext Tab Manager",
+  "version": "0.1.0",
+  "description": "Generate and manage tab groups from plaintext instructions. Minimal MV3 + optional free HF Inference API.",
+  "action": {
+    "default_title": "TabGen",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api-inference.huggingface.co/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  }
+  
+}
